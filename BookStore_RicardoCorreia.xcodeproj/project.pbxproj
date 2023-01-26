@@ -9,23 +9,31 @@
 /* Begin PBXBuildFile section */
 		1849F1B92982FE510071FB34 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1849F1B82982FE510071FB34 /* AppDelegate.swift */; };
 		1849F1BB2982FE510071FB34 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1849F1BA2982FE510071FB34 /* SceneDelegate.swift */; };
-		1849F1BD2982FE510071FB34 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1849F1BC2982FE510071FB34 /* ViewController.swift */; };
+		1849F1BD2982FE510071FB34 /* BKListViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1849F1BC2982FE510071FB34 /* BKListViewController.swift */; };
 		1849F1C02982FE510071FB34 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 1849F1BE2982FE510071FB34 /* Main.storyboard */; };
 		1849F1C32982FE510071FB34 /* BookStore_RicardoCorreia.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 1849F1C12982FE510071FB34 /* BookStore_RicardoCorreia.xcdatamodeld */; };
 		1849F1C52982FE510071FB34 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 1849F1C42982FE510071FB34 /* Assets.xcassets */; };
 		1849F1C82982FE510071FB34 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 1849F1C62982FE510071FB34 /* LaunchScreen.storyboard */; };
+		1849F1D02982FEEF0071FB34 /* BKDetailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1849F1CF2982FEEF0071FB34 /* BKDetailViewController.swift */; };
+		1849F1D4298300E40071FB34 /* BKThumbnailCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1849F1D2298300E40071FB34 /* BKThumbnailCell.swift */; };
+		1849F1D5298300E40071FB34 /* BKThumbnailCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 1849F1D3298300E40071FB34 /* BKThumbnailCell.xib */; };
+		1849F1DB2983E31B0071FB34 /* UIButton+Favorite.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1849F1DA2983E31B0071FB34 /* UIButton+Favorite.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
 		1849F1B52982FE510071FB34 /* BookStore_RicardoCorreia.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = BookStore_RicardoCorreia.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		1849F1B82982FE510071FB34 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		1849F1BA2982FE510071FB34 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
-		1849F1BC2982FE510071FB34 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
+		1849F1BC2982FE510071FB34 /* BKListViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BKListViewController.swift; sourceTree = "<group>"; };
 		1849F1BF2982FE510071FB34 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		1849F1C22982FE510071FB34 /* BookStore_RicardoCorreia.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = BookStore_RicardoCorreia.xcdatamodel; sourceTree = "<group>"; };
 		1849F1C42982FE510071FB34 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		1849F1C72982FE510071FB34 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		1849F1C92982FE510071FB34 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		1849F1CF2982FEEF0071FB34 /* BKDetailViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BKDetailViewController.swift; sourceTree = "<group>"; };
+		1849F1D2298300E40071FB34 /* BKThumbnailCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BKThumbnailCell.swift; sourceTree = "<group>"; };
+		1849F1D3298300E40071FB34 /* BKThumbnailCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = BKThumbnailCell.xib; sourceTree = "<group>"; };
+		1849F1DA2983E31B0071FB34 /* UIButton+Favorite.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIButton+Favorite.swift"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -60,14 +68,66 @@
 			children = (
 				1849F1B82982FE510071FB34 /* AppDelegate.swift */,
 				1849F1BA2982FE510071FB34 /* SceneDelegate.swift */,
-				1849F1BC2982FE510071FB34 /* ViewController.swift */,
-				1849F1BE2982FE510071FB34 /* Main.storyboard */,
+				1849F1D12982FF0A0071FB34 /* UI */,
+				1849F1DC2983E8C20071FB34 /* Data */,
 				1849F1C42982FE510071FB34 /* Assets.xcassets */,
-				1849F1C62982FE510071FB34 /* LaunchScreen.storyboard */,
 				1849F1C92982FE510071FB34 /* Info.plist */,
 				1849F1C12982FE510071FB34 /* BookStore_RicardoCorreia.xcdatamodeld */,
 			);
 			path = BookStore_RicardoCorreia;
+			sourceTree = "<group>";
+		};
+		1849F1D12982FF0A0071FB34 /* UI */ = {
+			isa = PBXGroup;
+			children = (
+				1849F1D82983E22D0071FB34 /* Storyboard */,
+				1849F1D62983E1B60071FB34 /* ViewController */,
+				1849F1D72983E1F20071FB34 /* CollectionViewCell */,
+				1849F1D92983E2850071FB34 /* Button */,
+			);
+			path = UI;
+			sourceTree = "<group>";
+		};
+		1849F1D62983E1B60071FB34 /* ViewController */ = {
+			isa = PBXGroup;
+			children = (
+				1849F1BC2982FE510071FB34 /* BKListViewController.swift */,
+				1849F1CF2982FEEF0071FB34 /* BKDetailViewController.swift */,
+			);
+			path = ViewController;
+			sourceTree = "<group>";
+		};
+		1849F1D72983E1F20071FB34 /* CollectionViewCell */ = {
+			isa = PBXGroup;
+			children = (
+				1849F1D2298300E40071FB34 /* BKThumbnailCell.swift */,
+				1849F1D3298300E40071FB34 /* BKThumbnailCell.xib */,
+			);
+			path = CollectionViewCell;
+			sourceTree = "<group>";
+		};
+		1849F1D82983E22D0071FB34 /* Storyboard */ = {
+			isa = PBXGroup;
+			children = (
+				1849F1C62982FE510071FB34 /* LaunchScreen.storyboard */,
+				1849F1BE2982FE510071FB34 /* Main.storyboard */,
+			);
+			path = Storyboard;
+			sourceTree = "<group>";
+		};
+		1849F1D92983E2850071FB34 /* Button */ = {
+			isa = PBXGroup;
+			children = (
+				1849F1DA2983E31B0071FB34 /* UIButton+Favorite.swift */,
+			);
+			path = Button;
+			sourceTree = "<group>";
+		};
+		1849F1DC2983E8C20071FB34 /* Data */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Data;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -128,6 +188,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				1849F1D5298300E40071FB34 /* BKThumbnailCell.xib in Resources */,
 				1849F1C82982FE510071FB34 /* LaunchScreen.storyboard in Resources */,
 				1849F1C52982FE510071FB34 /* Assets.xcassets in Resources */,
 				1849F1C02982FE510071FB34 /* Main.storyboard in Resources */,
@@ -141,10 +202,13 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				1849F1BD2982FE510071FB34 /* ViewController.swift in Sources */,
+				1849F1D4298300E40071FB34 /* BKThumbnailCell.swift in Sources */,
+				1849F1BD2982FE510071FB34 /* BKListViewController.swift in Sources */,
 				1849F1C32982FE510071FB34 /* BookStore_RicardoCorreia.xcdatamodeld in Sources */,
 				1849F1B92982FE510071FB34 /* AppDelegate.swift in Sources */,
 				1849F1BB2982FE510071FB34 /* SceneDelegate.swift in Sources */,
+				1849F1DB2983E31B0071FB34 /* UIButton+Favorite.swift in Sources */,
+				1849F1D02982FEEF0071FB34 /* BKDetailViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
