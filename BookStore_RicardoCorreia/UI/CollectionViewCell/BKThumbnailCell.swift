@@ -13,19 +13,24 @@ class BKThumbnailCell: UICollectionViewCell {
     
     @IBOutlet private weak var imageView: UIImageView!
     
+    // MARK: Data
+    
+    var bookId: String?
+    
     // MARK: View Lifecycle
     
     override func awakeFromNib() {
         super.awakeFromNib()
         
-        layoutMargins = .zero
-        backgroundColor = .blue
+        contentView.layoutMargins = .zero
+        imageView.contentMode = .scaleAspectFit
     }
     
     override func prepareForReuse() {
         super.prepareForReuse()
         
         imageView.image = nil
+        bookId = nil
     }
     
     // MARK: Populating

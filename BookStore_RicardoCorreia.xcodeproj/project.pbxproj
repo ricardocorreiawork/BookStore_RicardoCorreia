@@ -18,6 +18,13 @@
 		1849F1D4298300E40071FB34 /* BKThumbnailCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1849F1D2298300E40071FB34 /* BKThumbnailCell.swift */; };
 		1849F1D5298300E40071FB34 /* BKThumbnailCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 1849F1D3298300E40071FB34 /* BKThumbnailCell.xib */; };
 		1849F1DB2983E31B0071FB34 /* UIButton+Favorite.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1849F1DA2983E31B0071FB34 /* UIButton+Favorite.swift */; };
+		1849F1E12983F4600071FB34 /* BKService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1849F1E02983F4600071FB34 /* BKService.swift */; };
+		1849F1E32984055F0071FB34 /* BKBooksService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1849F1E22984055F0071FB34 /* BKBooksService.swift */; };
+		1849F1E5298414D20071FB34 /* BKBooksResponse.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1849F1E4298414D20071FB34 /* BKBooksResponse.swift */; };
+		1849F1E829855F3C0071FB34 /* BKDomainModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1849F1E729855F3C0071FB34 /* BKDomainModel.swift */; };
+		1849F1EC298576350071FB34 /* BKCoordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1849F1EB298576350071FB34 /* BKCoordinator.swift */; };
+		189363D12985BC5D00358DD2 /* BKRootNavigationController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 189363D02985BC5D00358DD2 /* BKRootNavigationController.swift */; };
+		189363D42985C07200358DD2 /* BKBook.swift in Sources */ = {isa = PBXBuildFile; fileRef = 189363D32985C07200358DD2 /* BKBook.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -34,6 +41,13 @@
 		1849F1D2298300E40071FB34 /* BKThumbnailCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BKThumbnailCell.swift; sourceTree = "<group>"; };
 		1849F1D3298300E40071FB34 /* BKThumbnailCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = BKThumbnailCell.xib; sourceTree = "<group>"; };
 		1849F1DA2983E31B0071FB34 /* UIButton+Favorite.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIButton+Favorite.swift"; sourceTree = "<group>"; };
+		1849F1E02983F4600071FB34 /* BKService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BKService.swift; sourceTree = "<group>"; };
+		1849F1E22984055F0071FB34 /* BKBooksService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BKBooksService.swift; sourceTree = "<group>"; };
+		1849F1E4298414D20071FB34 /* BKBooksResponse.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BKBooksResponse.swift; sourceTree = "<group>"; };
+		1849F1E729855F3C0071FB34 /* BKDomainModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BKDomainModel.swift; sourceTree = "<group>"; };
+		1849F1EB298576350071FB34 /* BKCoordinator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BKCoordinator.swift; sourceTree = "<group>"; };
+		189363D02985BC5D00358DD2 /* BKRootNavigationController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BKRootNavigationController.swift; sourceTree = "<group>"; };
+		189363D32985C07200358DD2 /* BKBook.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BKBook.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -68,8 +82,9 @@
 			children = (
 				1849F1B82982FE510071FB34 /* AppDelegate.swift */,
 				1849F1BA2982FE510071FB34 /* SceneDelegate.swift */,
+				1849F1E629855EDF0071FB34 /* DomainModel */,
+				1849F1EA298575E30071FB34 /* Coordinator */,
 				1849F1D12982FF0A0071FB34 /* UI */,
-				1849F1DC2983E8C20071FB34 /* Data */,
 				1849F1C42982FE510071FB34 /* Assets.xcassets */,
 				1849F1C92982FE510071FB34 /* Info.plist */,
 				1849F1C12982FE510071FB34 /* BookStore_RicardoCorreia.xcdatamodeld */,
@@ -80,6 +95,7 @@
 		1849F1D12982FF0A0071FB34 /* UI */ = {
 			isa = PBXGroup;
 			children = (
+				189363D22985C02900358DD2 /* Model */,
 				1849F1D82983E22D0071FB34 /* Storyboard */,
 				1849F1D62983E1B60071FB34 /* ViewController */,
 				1849F1D72983E1F20071FB34 /* CollectionViewCell */,
@@ -91,6 +107,7 @@
 		1849F1D62983E1B60071FB34 /* ViewController */ = {
 			isa = PBXGroup;
 			children = (
+				189363D02985BC5D00358DD2 /* BKRootNavigationController.swift */,
 				1849F1BC2982FE510071FB34 /* BKListViewController.swift */,
 				1849F1CF2982FEEF0071FB34 /* BKDetailViewController.swift */,
 			);
@@ -123,11 +140,47 @@
 			path = Button;
 			sourceTree = "<group>";
 		};
-		1849F1DC2983E8C20071FB34 /* Data */ = {
+		1849F1DF2983F40E0071FB34 /* Service */ = {
 			isa = PBXGroup;
 			children = (
+				1849F1E02983F4600071FB34 /* BKService.swift */,
+				1849F1E22984055F0071FB34 /* BKBooksService.swift */,
 			);
-			path = Data;
+			path = Service;
+			sourceTree = "<group>";
+		};
+		1849F1E629855EDF0071FB34 /* DomainModel */ = {
+			isa = PBXGroup;
+			children = (
+				1849F1E729855F3C0071FB34 /* BKDomainModel.swift */,
+				1849F1DF2983F40E0071FB34 /* Service */,
+				1849F1E92985702D0071FB34 /* Model */,
+			);
+			path = DomainModel;
+			sourceTree = "<group>";
+		};
+		1849F1E92985702D0071FB34 /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				1849F1E4298414D20071FB34 /* BKBooksResponse.swift */,
+			);
+			path = Model;
+			sourceTree = "<group>";
+		};
+		1849F1EA298575E30071FB34 /* Coordinator */ = {
+			isa = PBXGroup;
+			children = (
+				1849F1EB298576350071FB34 /* BKCoordinator.swift */,
+			);
+			path = Coordinator;
+			sourceTree = "<group>";
+		};
+		189363D22985C02900358DD2 /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				189363D32985C07200358DD2 /* BKBook.swift */,
+			);
+			path = Model;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -202,13 +255,20 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				1849F1E829855F3C0071FB34 /* BKDomainModel.swift in Sources */,
 				1849F1D4298300E40071FB34 /* BKThumbnailCell.swift in Sources */,
 				1849F1BD2982FE510071FB34 /* BKListViewController.swift in Sources */,
+				1849F1E12983F4600071FB34 /* BKService.swift in Sources */,
 				1849F1C32982FE510071FB34 /* BookStore_RicardoCorreia.xcdatamodeld in Sources */,
 				1849F1B92982FE510071FB34 /* AppDelegate.swift in Sources */,
 				1849F1BB2982FE510071FB34 /* SceneDelegate.swift in Sources */,
+				189363D42985C07200358DD2 /* BKBook.swift in Sources */,
+				1849F1EC298576350071FB34 /* BKCoordinator.swift in Sources */,
+				1849F1E32984055F0071FB34 /* BKBooksService.swift in Sources */,
 				1849F1DB2983E31B0071FB34 /* UIButton+Favorite.swift in Sources */,
 				1849F1D02982FEEF0071FB34 /* BKDetailViewController.swift in Sources */,
+				1849F1E5298414D20071FB34 /* BKBooksResponse.swift in Sources */,
+				189363D12985BC5D00358DD2 /* BKRootNavigationController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
