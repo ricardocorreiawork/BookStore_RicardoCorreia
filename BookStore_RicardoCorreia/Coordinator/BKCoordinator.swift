@@ -140,6 +140,7 @@ extension BKCoordinator {
         
         if flag {
             domainModel.save(book)
+            books[indexOfBookOpenInDetailView].isFavorite = true
         } else {
             domainModel.deleteBook(withId: book.identifier)
         }
