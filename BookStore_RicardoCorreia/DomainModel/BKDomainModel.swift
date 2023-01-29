@@ -8,6 +8,11 @@
 import UIKit
 import CoreData
 
+/**
+ The domain model provides a layer of abstraction to the multiple sources of our data, so that,
+ the requester and consumer of the data doesn't need to know if the data source is a webservice,
+ persistent storage or a cache.
+ */
 class BKDomainModel {
     
     private let service = BKBooksService()

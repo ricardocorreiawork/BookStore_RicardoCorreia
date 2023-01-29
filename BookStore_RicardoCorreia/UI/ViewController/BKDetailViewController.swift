@@ -43,7 +43,7 @@ class BKDetailViewController: UIViewController {
     
     // MARK: Coordinator
     
-    var coordinator: BKCoordinator!
+    var coordinator: BKCoordinatorDetailViewInteraction!
     
     // MARK: Data
     

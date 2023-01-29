@@ -6,16 +6,30 @@
 //
 
 import UIKit
-
+/**
+ A coordinator based architecture is particularly useful to manage a flow of two or
+ more view controllers that share a common data set.
+ The coordinator serves as a single source of truth for several view controllers,
+ assuring that any changes in the data by the user interaction in a view controller
+ are properly refleted in the other view controllers.
+ */
 class BKCoordinator {
+    
+    // MARK: Identifiers
     
     private static let listViewControllerId = "list"
     private static let detailViewControllerId = "detail"
     
+    // MARK: Domain Model
+    
     private let domainModel = BKDomainModel()
+    
+    // MARK: View Controllers
     
     private let navController: UINavigationController
     private weak var listVC: BKListViewController?
+    
+    // MARK: Data
     
     private var books: [BKBook] = []
     private var savedBooks: [BKBook] = []
@@ -25,13 +39,17 @@ class BKCoordinator {
     
     private var indexOfBookOpenInDetailView = 0
     
+    // MARK: Init
+    
     init(navigationController: UINavigationController) {
         self.navController = navigationController
     }
     
     func start() {
+        // Get favorite books
         updateSavedBooks()
         
+        // Present list view controller
         guard let storyboard = navController.storyboard else { return }
         
         let listVC = storyboard.instantiateViewController(withIdentifier: BKCoordinator.listViewControllerId) as! BKListViewController
@@ -67,6 +85,11 @@ class BKCoordinator {
         }
     }
     
+    /*
+     Build a book view model from the service response model.
+     A view model contains all the information needed to populate a view;
+     the information should be properly formatted and ready to be displayed by the view without any extra processing.
+     */
     private func makeViewModel(from responseModel: BKBookResponse) -> BKBook {
         let isFavorite = savedBooks.contains(where: { $0.identifier == responseModel.identifier })
         
@@ -83,7 +106,24 @@ class BKCoordinator {
 
 // MARK: - List View Interaction
 
-extension BKCoordinator {
+// Protocol that defines the communication between the list view and the coordinator.
+protocol BKCoordinatorListViewInteraction {
+    
+    var numberOfBooks: Int { get }
+    
+    func getBook(at index: Int) -> BKBook
+    
+    func getThumbnailForBook(at index: Int, completion: @escaping (String, UIImage?) -> Void)
+    
+    func didSelectBook(at index: Int)
+    
+    func didTapFavorites()
+    
+    func didReachEndOfList()
+    
+}
+
+extension BKCoordinator: BKCoordinatorListViewInteraction {
     
     var numberOfBooks: Int {
         isShowingSavedBooks ? savedBooks.count : books.count
@@ -133,7 +173,16 @@ extension BKCoordinator {
 
 // MARK: - Detail View Interaction
 
-extension BKCoordinator {
+// Protocol that defines the communication between the detail view and the coordinator.
+protocol BKCoordinatorDetailViewInteraction {
+    
+    func didChangeFavoriteStatus(_ flag: Bool)
+    
+    func didTapBuyLink()
+    
+}
+
+extension BKCoordinator: BKCoordinatorDetailViewInteraction {
     
     func didChangeFavoriteStatus(_ flag: Bool) {
         let book = getBook(at: indexOfBookOpenInDetailView)

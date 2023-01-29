@@ -19,7 +19,7 @@ class BKListViewController: UIViewController {
     
     // MARK: Coordinator
     
-    var coordinator: BKCoordinator!
+    var coordinator: BKCoordinatorListViewInteraction!
     
     // MARK: View Lifecycle
     
